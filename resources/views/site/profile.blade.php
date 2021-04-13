@@ -3,8 +3,6 @@
 @section('title', 'My Profile')
 
 @section('content')
-    
-    
     <section id="contact-map" class="section-padding">
         <div class="container">
             <div class="row">
@@ -27,7 +25,6 @@
                                     <tr>
                                         <th scope="row">First Name</th>
                                         <td>Martina</td>
-                                        
                                     </tr>
                                     <tr>
                                         <th scope="row">Last Name</th>
@@ -43,13 +40,12 @@
                                     </tr>
                                     </tbody>
                               </table>
-                        
                         </div>
                     </div>
                 </div>
              </div>
         </div>
     </section>
-    
-    
+
+
 @endsection

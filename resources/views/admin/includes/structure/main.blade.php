@@ -15,14 +15,22 @@
                 <!--Categories-->
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-house-1"></span><span class="mtext">Categories</span>
+                        <span class="micon dw dw-house-1"></span><span class="mtext">Halls</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="">View all</a></li>
-                        <li><a href="">Add New Category</a></li>
+                        <li><a href="{{route('halls.index')}}">View all</a></li>
+                        <li><a href="{{route('halls.create')}}">Add New Hall</a></li>
                     </ul>
                 </li>
-
+                <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="micon  dw dw-happy"></span><span class="mtext">Events</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="{{route('events.index')}}">View all</a></li>
+                        <li><a href="{{route('events.create')}}">Add New Event</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

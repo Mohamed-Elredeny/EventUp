@@ -25,8 +25,23 @@
 <div class="mobile-menu-overlay"></div>
 
 <div class="main-container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
     @yield('main-container')
 </div>
+
 
 @section('footer')
     @include('admin.includes.footer')

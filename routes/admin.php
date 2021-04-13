@@ -13,9 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Vendor routes
-Route::prefix('admin')->group(function(){
-    Route::get('/', 'Users\Admin\AdminController@index')->name('admin.dashboard');
-    Route::get('test/add','Users\Admin\AdminController@testadd');
-    Route::get('test/view','Users\Admin\AdminController@testview');
 
+Route::group(['namespace'=>'Users\Admin','prefix'=>'admin'],function(){
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('test/add','AdminController@testadd');
+    Route::get('test/view','AdminController@testview');
+    Route::resource('halls','HallsController');//Done
+    Route::resource('events','EventsController');//Done
+    //Task1;
+    Route::get('yaMshl',function (){
+       $number = rand(0,1);
+       $names = ['martina','mohamed'];
+       return $names[$number];
+    });
 });
+

@@ -1,7 +1,7 @@
 @if( LaravelLocalization::getCurrentLocaleName() == "English")
 <html>
 <head>
-    <title>Chief Khalil</title>
+    <title>Events</title>
 </head>
 @section('header')
     @include('admin.includes.header')
@@ -25,6 +25,20 @@
 <div class="mobile-menu-overlay"></div>
 
 <div class="main-container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
     @yield('main-container')
 </div>
 
@@ -37,7 +51,7 @@
 @else
 <html style="text-align:right;direction:rtl">
 <head>
-    <title>الشيف خليل</title>
+    <title>الحفلات</title>
 </head>
 
 @section('header')

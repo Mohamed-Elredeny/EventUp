@@ -3,8 +3,8 @@
 @section('title', 'Sign In')
 
 @section('content')
-    
-    
+
+
     <section id="contact-map" class="section-padding">
         <div class="container">
             <div class="row">
@@ -21,21 +21,18 @@
                         <div class="form-wrapper">
                             <form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
                                 <div class="row">
-                                   
                                     <div class="col-md-12 form-line">
                                         <div class="form-group">
                                             <input type="email" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email" required>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    
                                     <div class="col-md-12 form-line">
                                         <div class="form-group">
                                             <input type="password" class="form-control" id="phone" name="password" placeholder="password" required data-error="Please enter your password" required>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                  
                                    <div class="col-md-12">
                                         <div class="form-submit">
                                             <button type="submit" class="btn btn-common" id="form-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Sing In</button>
@@ -50,6 +47,6 @@
              </div>
         </div>
     </section>
-    
-    
+
+
 @endsection
